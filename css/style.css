@@ -1,0 +1,468 @@
+/* aliases for imgs/colors */
+
+:root {
+  --header-image: url('../images/pinkstars.png');
+  --body-bg-image: url('../images/pinkstars.png');
+
+/* colors */
+  --dgrey: #060606;
+  --mgold: #D8824D;
+  --lgold: #FFB75E;
+  --mrose: #C06A69;
+  --lrose: #f49095;
+  --beige: #F1BAAD;
+
+}
+
+
+/* used for h1 text */
+@font-face {
+  font-family: "Nabla", system-ui;
+  src: url('../fonts/Berolina.ttf');
+}
+
+/* used for h2/h3 text */
+@font-face {
+  font-family: "Nabla", system-ui;
+  src: url('../fonts/DellaRespira-Regular.ttf')
+}
+
+body {
+  font-family: Georgia, serif;
+  line-height: 1.6;
+  margin: 0;
+  background-color: #000;
+  color: var(--beige);
+  background-image: var(--body-bg-image);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* below this line is CSS for the layout */
+
+/* the "container" is what wraps your entire website */
+/* if you want something (like the header) to be Wider than
+the other elements, you will need to move that div outside
+of the container */
+#container {
+  max-width: 100%;
+  /* this is the width of your layout! */
+  /* if you change the above value, scroll to the bottom
+  and change the media query according to the comment! */
+  /* this centers the entire page */
+}
+
+#back,
+#front {
+  filter: blur(0px);
+}
+
+/* the area below is for all links on your page
+EXCEPT for the navigation */
+#container a {
+  color: var(--mgold);
+  font-weight: bold;
+}
+
+#container a:hover {
+  color: var(--lgold);
+  font-weight: bold;
+}
+
+
+#header {
+  display: flex;
+  max-width: 900px;
+  background-size: 100%;
+  border-bottom: 2px solid var(--mrose);
+  justify-content: center;
+  margin-top: 10px;
+  margin: 0 auto;
+}
+
+.header__buttons{
+  position: absolute;
+  left: 30px;
+  top: 25px;
+  display: flex;
+  column-gap: 15px;
+  
+  button{
+    background-color: transparent;
+    color: #D8824D;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 5px var(--mrose) double;
+    transition: .3s ease;
+  }
+
+  button:hover{
+    opacity: .4;
+  }
+}
+
+tulip {
+  display: grid;
+  align-content: end;
+  padding: 20px;
+}
+
+gardentitle {
+  line-height: 3.5em;
+}
+
+nav {
+  
+  text-align: center;
+  color: var(--mrose);
+}
+
+nav .navlink {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 2px;
+  font-size: 1.2em;
+  text-decoration:none;
+  font-family: Georgia, serif;
+  font-weight:bold;
+}
+
+
+
+
+#flex {
+  display: flex;
+}
+
+/* main content box */
+main {
+  margin: 0 auto;
+  max-width: 900px;
+  background-color: var(--dgrey);
+  flex: 1;
+  padding: 20px;
+  order: 2;
+  border: 5px var(--mrose) double;
+}
+
+footer {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: small;
+  color: var(--mrose);
+  line-height: 1em;
+}
+
+h1 {
+  color: var(--beige);
+  text-align: center;
+  font-family: "Nabla", system-ui;
+  margin: 15px;
+  line-height: 1em;
+  letter-spacing: 1px;
+  font-size: 40px;
+}
+
+h2,
+h3 {
+  color: var(--mrose);
+  text-align: center;
+  font-family: Della Respira, Times New Roman, serif;
+  margin: 15px;
+  line-height: 1.2em;
+  border-bottom: 1px solid var(--mrose);
+  padding-bottom: 10px;
+}
+
+h2 {
+  font-size: 40px;
+} 
+
+h3 {
+  font-size: 20px;
+} 
+
+h4 {
+  font-size: 20px;
+  color: var(--mrose);
+  text-align: center;
+  font-family: Della Respira, Times New Roman, serif;
+  margin: 10px;
+  border-bottom: 1px solid var(--mrose);
+}
+
+img {
+     max-width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+#diana {
+  align-self: center;
+  max-width: 50%;
+}
+
+#blackhole {
+  position: relative;
+  width: 400px;
+  height: 200px;
+}
+
+canvas{
+  
+  position: absolute;
+  max-width: 200%;
+  max-height: 200%;
+  left: 0;
+  top: -80px;
+  /* transform: translateY(-45%); */
+  transform: translateX(-22%);
+}
+
+#front{
+  
+}
+
+#middle{
+  
+}
+
+#back{
+  
+}
+
+#updates {
+  background-color: var(--dgrey);
+  width: 30%;
+  min-height: 250px;
+  min-width: 220px;
+  margin: 10px;
+  align-self: self-end;
+  border: 1px solid var(--mrose);
+  
+}
+
+.button-taw{
+  display: flex;
+  padding: 5px 20px;
+  margin: 0 auto;
+  border: 5px var(--mrose) double;
+  background-color: transparent;
+  color: #D8824D;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.button-taw:hover{
+  opacity: .4;
+}
+
+#cell {
+  width: 120px;
+  text-align: center;
+  align-self: flex-end;
+  margin: 10px;
+}
+
+.frame {
+  height: 180px;
+  width: 235px;
+  margin: 10px;
+  border: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  
+}
+
+.error-name{
+  font-size: 16px;
+}
+
+.error-description{
+  font-size: 13px;
+
+  span{
+    font-style: 14px;
+    font-weight: 600;
+  }
+}
+
+.main__bottom{
+  display: flex;
+  column-gap: 40px;
+}
+
+.main__bottom-gif{
+  max-width: 50%;
+}
+
+.main__bottom-right{
+  
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  color: #F1BAAD;
+}
+
+#typing-text1{
+  white-space: pre-line;
+}
+
+#typing-text2{
+  white-space: pre-line;
+}
+
+.main__bottom-right-title{
+  text-align: center;
+}
+
+.frame .error:nth-child(odd){
+
+  background-color: hsl(338, 29%, 15%);
+  
+}
+
+/* this is just a cool box, it's the darker colored one */
+.box {
+  background-color: #13092D;
+  border: 1px solid #ED64F5;
+  padding: 10px;
+}
+
+.intro {
+  font-size: small;
+  font-style: italic;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--mrose);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 80%;
+  border: 1px solid var(--mrose);
+}
+
+/* scrollbar trick's */
+
+/* for firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--mrose) var(--dgrey);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--dgrey);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--mrose);
+  border-radius: 10px;
+  border: 1px none #ffffff;
+}
+
+/* BELOW THIS POINT IS MEDIA QUERY */
+
+/* so you wanna change the width of your page? 
+by default, the container width is 900px.
+in order to keep things responsive, take your new height,
+and then subtrack it by 100. use this new number as the 
+"max-width" value below
+*/
+
+@media only screen and (max-width: 900px) {
+  #flex {
+    flex-wrap: wrap;
+  }
+  
+  #container {
+    max-width: 90%;
+  }
+  
+  main {
+    width: 100%;
+    order: 1;
+  }
+  
+  .flex-container {
+    flex-direction: column;
+  }
+  
+  #diana {
+    width: 80%;
+    align-self: center;
+  }
+  
+  #updates {
+    width: 80%;
+    height: 300px;
+    align-self: center;
+  }
+  
+  .frame {
+    width: 95%;
+    height: 220px;
+  }
+  
+  #cell {
+    align-items: center;
+    width: 100%;
+  }
+  
+  #cell img {
+    width: 120px;
+  }
+  
+}
+
+@media only screen and (max-width: 600px) {
+  
+  #container {
+    max-width: 90%;
+  }
+  
+  #header {
+    flex-direction: column-reverse;
+  }
+
+  #header h1 {
+    font-size: 50px;
+  }
+
+  tulip {
+    padding: 10px;
+    margin-top: -10px;
+  }
+
+  #second {
+    display: none;
+  }
+
+}
